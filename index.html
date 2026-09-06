@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b5cff">
 
+  <title>Esalna EduTech</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: #0b5cff;
+      color: white;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .menu {
+      font-size: 25px;
+    }
+
+    .hero {
+      background: white;
+      padding: 35px 20px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #667085;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .start-btn {
+      background: #0b5cff;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 25px 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px 15px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #667085;
+      line-height: 1.4;
+    }
+
+    .coach {
+      background: #111827;
+      color: white;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .coach p {
+      color: #d1d5db;
+      margin: 10px 0 18px;
+      line-height: 1.5;
+    }
+
+    .coach-btn {
+      background: white;
+      color: #111827;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #667085;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Esalna</div>
+    <div class="menu">☰</div>
+  </header>
+
+  <section class="hero">
+    <h1>Learn. Grow. Achieve.</h1>
+
+    <p>
+      Welcome to Esalna EduTech — a modern learning platform
+      designed to make quality education accessible to every learner.
+    </p>
+
+    <button class="start-btn">Start Learning</button>
+  </section>
+
+  <section class="section">
+    <h2>Explore Esalna</h2>
+
+    <div class="features">
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Study Hub</h3>
+        <p>Lessons, notes, practice, tests and examinations.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Coach Mona</h3>
+        <p>Your AI learning coach for explanations, practice and guidance.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎮</div>
+        <h3>Esalna Games</h3>
+        <p>Learn through educational games, challenges and competitions.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>Connect</h3>
+        <p>Communicate with teachers, classmates and the Esalna community.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+
+    <div class="coach">
+      <h2>Meet Coach Mona 🤖</h2>
+
+      <p>
+        Ask questions, get concepts explained, practise difficult topics
+        and receive personalised learning support.
+      </p>
+
+      <button class="coach-btn">Ask Coach Mona</button>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Esalna EduTech — Global Learning Platform
+  </footer>
+
+</body>
+</html>
