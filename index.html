@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b5cff">
+  <meta name="theme-color" content="#38B7FE">
 
-  <title>Esalna EduTech</title>
+  <title>Esalna EduTech | Always Learning</title>
 
   <style>
     * {
@@ -16,61 +16,96 @@
     }
 
     body {
-      background: #f5f7fb;
-      color: #172033;
+      background: #f5fbff;
+      color: #111827;
     }
 
     header {
-      background: #0b5cff;
-      color: white;
-      padding: 18px 20px;
+      background: #ffffff;
+      padding: 12px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 25px;
-      font-weight: bold;
+      width: 125px;
+      height: auto;
+      display: block;
     }
 
     .menu {
-      font-size: 25px;
+      font-size: 28px;
+      color: #111827;
+      cursor: pointer;
     }
 
     .hero {
-      background: white;
-      padding: 35px 20px;
+      background: linear-gradient(135deg, #ffffff, #eff9ff);
+      padding: 45px 20px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #dff3ff;
+      color: #1689c7;
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .hero h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #38B7FE;
     }
 
     .hero p {
       color: #667085;
       line-height: 1.6;
-      margin-bottom: 22px;
+      font-size: 16px;
+      margin-bottom: 25px;
     }
 
     .start-btn {
-      background: #0b5cff;
+      background: #38B7FE;
       color: white;
       border: none;
-      padding: 14px 22px;
+      padding: 15px 25px;
       border-radius: 10px;
       font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(56,183,254,0.25);
+    }
+
+    .start-btn:hover {
+      background: #159fe8;
     }
 
     .section {
-      padding: 25px 20px;
+      padding: 30px 20px;
     }
 
-    .section h2 {
-      margin-bottom: 15px;
-      font-size: 22px;
+    .section-title {
+      font-size: 25px;
+      margin-bottom: 7px;
+    }
+
+    .section-subtitle {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .features {
@@ -82,13 +117,27 @@
     .card {
       background: white;
       padding: 20px 15px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      border-radius: 16px;
+      border: 1px solid #e8f3f9;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .icon {
-      font-size: 30px;
-      margin-bottom: 10px;
+      width: 48px;
+      height: 48px;
+      background: #e8f7ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
@@ -99,19 +148,36 @@
     .card p {
       font-size: 13px;
       color: #667085;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .coach {
       background: #111827;
       color: white;
-      border-radius: 16px;
-      padding: 22px;
+      border-radius: 20px;
+      padding: 25px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coach-badge {
+      display: inline-block;
+      background: #38B7FE;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .coach h2 {
+      font-size: 25px;
+      margin-bottom: 10px;
     }
 
     .coach p {
       color: #d1d5db;
-      margin: 10px 0 18px;
+      margin-bottom: 20px;
       line-height: 1.5;
     }
 
@@ -119,16 +185,66 @@
       background: white;
       color: #111827;
       border: none;
-      padding: 12px 18px;
+      padding: 13px 19px;
       border-radius: 9px;
       font-weight: bold;
+      cursor: pointer;
+    }
+
+    .mission {
+      background: #eaf8ff;
+      border-radius: 18px;
+      padding: 24px 20px;
+      margin-top: 5px;
+    }
+
+    .mission h2 {
+      color: #1689c7;
+      margin-bottom: 10px;
+    }
+
+    .mission p {
+      color: #475467;
+      line-height: 1.6;
+      font-size: 14px;
     }
 
     footer {
+      background: white;
       text-align: center;
-      padding: 25px;
+      padding: 30px 20px;
+      margin-top: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer img {
+      width: 110px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
       color: #667085;
       font-size: 13px;
+    }
+
+    .tagline {
+      color: #38B7FE;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 700px) {
+      .hero,
+      .section {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .features {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   </style>
 </head>
@@ -136,71 +252,140 @@
 <body>
 
   <header>
-    <div class="logo">Esalna</div>
+    <img src="esalna-logo.jpg" alt="Esalna EduTech" class="logo">
     <div class="menu">☰</div>
   </header>
 
   <section class="hero">
-    <h1>Learn. Grow. Achieve.</h1>
+
+    <div class="hero-badge">🚀 THE FUTURE OF LEARNING</div>
+
+    <h1>
+      Learn.<br>
+      <span>Grow. Achieve.</span>
+    </h1>
 
     <p>
       Welcome to Esalna EduTech — a modern learning platform
       designed to make quality education accessible to every learner.
     </p>
 
-    <button class="start-btn">Start Learning</button>
+    <button class="start-btn" onclick="startLearning()">
+      Start Learning →
+    </button>
+
   </section>
 
   <section class="section">
-    <h2>Explore Esalna</h2>
+
+    <h2 class="section-title">Explore Esalna</h2>
+
+    <p class="section-subtitle">
+      Everything you need to learn, practise and succeed.
+    </p>
 
     <div class="features">
 
-      <div class="card">
+      <div class="card" onclick="openFeature('Study Hub')">
         <div class="icon">📚</div>
         <h3>Study Hub</h3>
-        <p>Lessons, notes, practice, tests and examinations.</p>
+        <p>
+          Lessons, notes, practice, tests and examinations.
+        </p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="openFeature('Coach Mona')">
         <div class="icon">🤖</div>
         <h3>Coach Mona</h3>
-        <p>Your AI learning coach for explanations, practice and guidance.</p>
+        <p>
+          Your AI learning coach for explanations and guidance.
+        </p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="openFeature('Esalna Games')">
         <div class="icon">🎮</div>
         <h3>Esalna Games</h3>
-        <p>Learn through educational games, challenges and competitions.</p>
+        <p>
+          Learn through educational games and challenges.
+        </p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="openFeature('Community')">
         <div class="icon">💬</div>
         <h3>Connect</h3>
-        <p>Communicate with teachers, classmates and the Esalna community.</p>
+        <p>
+          Connect with teachers, classmates and the community.
+        </p>
       </div>
 
     </div>
+
   </section>
 
   <section class="section">
 
     <div class="coach">
+
+      <div class="coach-badge">AI LEARNING COACH</div>
+
       <h2>Meet Coach Mona 🤖</h2>
 
       <p>
-        Ask questions, get concepts explained, practise difficult topics
-        and receive personalised learning support.
+        Ask questions, understand difficult concepts, practise
+        topics and receive personalised learning support.
       </p>
 
-      <button class="coach-btn">Ask Coach Mona</button>
+      <button class="coach-btn" onclick="openFeature('Coach Mona')">
+        Ask Coach Mona →
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="mission">
+
+      <div class="tagline">ALWAYS LEARNING</div>
+
+      <h2>Our Mission</h2>
+
+      <p>
+        Esalna EduTech is building modern learning solutions
+        that help bridge the education gap between learners
+        everywhere — from urban communities to rural schools.
+      </p>
+
     </div>
 
   </section>
 
   <footer>
-    © 2026 Esalna EduTech — Global Learning Platform
+
+    <img src="esalna-logo.jpg" alt="Esalna EduTech">
+
+    <p>
+      © 2026 Esalna EduTech
+    </p>
+
+    <p>
+      Always Learning.
+    </p>
+
   </footer>
+
+  <script>
+
+    function startLearning() {
+      alert("Welcome to Esalna! Your learning journey starts here.");
+    }
+
+    function openFeature(feature) {
+      alert(feature + " is coming soon!");
+    }
+
+  </script>
 
 </body>
 </html>
